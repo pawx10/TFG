@@ -1,0 +1,131 @@
+/* Fondo general de la página de carrito */
+body {
+    background-color: #272727;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Encabezado y navegación */
+header {
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-icons img {
+    width: 30px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+/* Contenido principal */
+main {
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #ffcc00;
+}
+
+/* Estilos del carrito */
+.cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.cart-item img {
+    width: 80px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.item-details {
+    flex-grow: 1;
+    padding-left: 15px;
+}
+
+.item-details p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+/* Botón de eliminar */
+.remove-btn {
+    background-color: #FF4020;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.remove-btn:hover {
+    background-color: #ff5733;
+}
+
+/* Resumen del carrito */
+.cart-summary {
+    text-align: right;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.cart-summary p {
+    font-size: 1.2rem;
+}
+
+.checkout-btn {
+    background-color: #FF4020;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.checkout-btn:hover {
+    background-color: #ff5733;
+}
+
+/* Footer */
+footer {
+    background-color: #111111;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    color: #fff;
+}
+
+footer .social-icons a img {
+    width: 30px;
+    margin: 0 10px;
+}

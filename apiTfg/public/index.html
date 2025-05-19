@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videojuegos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Tendencias</a></li>
+                <li><a href="#">Te Recomendamos</a></li>
+                <li><a href="reviews.html">Últimas Reviews</a></li>
+               
+                <button id="logout-btn" class="logout-button">Invitado</button>
+
+
+            </ul>
+            <div class="nav-icons">
+                <img src="../img/lupa.png" alt="Buscar" class="icon search-icon">
+                <a href="carrito.html">
+                <img src="../img/CARRITO.png" alt="Carrito" class="icon">
+                </a>
+                <span id="user-status-container">  </span>
+                <a href="" class="user-icon">
+                    <img src="../img/user.png" alt="Usuario" class="icon">
+                </a>
+          
+                
+            </div>
+        </nav>
+    </header>
+
+    <!-- Menú Hamburguesa -->
+    <div id="hamburger-menu" class="hamburger-menu">
+        <ul>
+            <li><a href="#">Comprar Juegos</a></li>
+            <li><a href="#">Comprar DLC</a></li>
+            <li><a href="reviews.html">Últimas Reviews</a></li>
+            
+        </ul>
+    </div>
+
+    <!-- Main -->
+    <main>
+        <!-- Banner -->
+        <section class="banner">
+            <img src="../img/wukong_banner.png" alt="Banner Videojuegos">
+        </section>
+
+        <!-- Sección de Tendencias -->
+        <section class="tendencias">
+            <h2>Tendencias</h2>
+            <div class="games">
+                
+            </div>
+        </section>
+
+        <!-- Sección Te Recomendamos -->
+        <section class="recomendaciones">
+            <h2>Te Recomendamos</h2>
+            <div class="recomendacion-banner">
+                <img src="../img/dragonball.jpg" alt="Dragon Ball Sparking ZERO">
+                <div class="texto-recomendacion">
+                    <h3>Dragon Ball: Sparking ZERO</h3>
+                    <p>¡A la venta por solo 60€!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Últimas Reviews -->
+        <section class="reviews">
+            <h2>Últimas Reviews</h2>
+            <div class="review-list">
+                <div class="review">
+                    <img src="../img/rdr2.jpg" alt="Red Dead Redemption 2">
+                    <p>Red Dead Redemption 2</p>
+                    <span>10/10</span>
+                </div>
+                <div class="review">
+                    <img src="../img/horizon.jpg" alt="Horizon Zero Dawn">
+                    <p>Horizon Zero Dawn</p>
+                    <span>9/10</span>
+                </div>
+                <div class="review">
+                    <img src="../img/metro.jpg" alt="Metro Exodus">
+                    <p>Metro Exodus</p>
+                    <span>8/10</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+ 
+    <script src="user.js"></script>
+    <script src="script.js"></script>
+    <script src="cart.js"></script>
+</body>
+</html>

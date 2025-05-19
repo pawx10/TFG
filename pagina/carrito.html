@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="carrito.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="cart.html">Carrito</a></li>
+        </ul>
+        <div class="nav-icons">
+            <img src="../img/lupa.png" alt="Buscar" class="icon search-icon">
+            <img src="../img/CARRITO.png" alt="Carrito" class="icon">
+            <a href="login.html"><img src="../img/user.png" alt="Usuario" class="icon"></a>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <h2>Carrito de Compras</h2>
+    <div class="cart-items">
+        <!-- Ejemplo de productos en el carrito -->
+        <div class="cart-item">
+            <img src="../img/product1.jpg" alt="Producto 1">
+            <div class="item-details">
+                <p>Nombre del Producto 1</p>
+                <p>Precio: 15€</p>
+                <p>Cantidad: <input type="number" value="1" min="1"></p>
+                <button class="remove-btn">Eliminar</button>
+            </div>
+        </div>
+        
+        <div class="cart-item">
+            <img src="../img/product2.jpg" alt="Producto 2">
+            <div class="item-details">
+                <p>Nombre del Producto 2</p>
+                <p>Precio: 20€</p>
+                <p>Cantidad: <input type="number" value="1" min="1"></p>
+                <button class="remove-btn">Eliminar</button>
+            </div>
+        </div>
+    </div>
+    <div class="cart-summary">
+        <p>Total: 35€</p>
+        <button class="checkout-btn">Proceder al Pago</button>
+    </div>
+</main>
+
+<footer>
+    <p>Síguenos en redes sociales</p>
+    <div class="social-icons">
+        <a href="#"><img src="../img/facebook-icon.png" alt="Facebook"></a>
+        <a href="#"><img src="../img/twitter-icon.png" alt="Twitter"></a>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

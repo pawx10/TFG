@@ -1,0 +1,274 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #272727;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #272727;
+    padding: 15px;
+}
+
+.logo {
+    font-size: 1.5rem;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-icons img {
+    width: 30px; /* Ajusta el tamaño a 30px para todos los íconos */
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+
+
+.banner img {
+    width: 100%;
+    height: 465px;
+    object-fit: cover;
+}
+
+/* Sección de Tendencias */
+.tendencias,
+.recomendaciones,
+.reviews {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #272727;
+    margin-bottom: 40px;
+}
+
+.tendencias h2,
+.recomendaciones h2,
+.reviews h2 {
+    margin-bottom: 40px;
+}
+
+.games {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.game {
+    width: 30%;
+    text-align: center;
+}
+
+.game img {
+    width: 50%;
+    height: auto;
+}
+
+.game-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.game-desc {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.game-ign {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.game-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.game-price {
+    font-size: 1.2rem;
+    color: #ffcc00;
+}
+
+.cart-icon {
+    width: 24px !important;  /* Ajusta el tamaño del carrito */
+    height: auto;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.game-title a {
+    color: #ffffff; /* Cambia el color del enlace */
+    text-decoration: none; /* Elimina el subrayado */
+    font-size: 1.2rem; /* Tamaño del texto */
+}
+
+.game-title a:hover {
+    text-decoration: underline;
+    color: #ffcc00; /* Subrayado al pasar el cursor */
+}
+/* Sección Recomendaciones */
+.recomendacion-banner {
+    position: relative;
+    width: 100%;
+    height: 465px;
+}
+
+.recomendacion-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.texto-recomendacion {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #fff;
+    background-color:rgba(0, 0, 0, 0.178);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.texto-recomendacion h3 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.texto-recomendacion p {
+    font-size: 1.5rem;
+}
+
+/* Sección de Reviews */
+.review-list {
+    display: flex;
+    justify-content: center; /* Centrado */
+    gap: 20px; /* Espacio entre reviews */
+}
+
+.review {
+    width: 30%;
+    text-align: center;
+}
+
+.review img {
+    width: 50%;
+    height: auto;
+}
+
+
+/* Footer */
+footer {
+    background-color: #111111;
+    padding: 20px;
+    text-align: center;
+}
+
+footer .social-icons a img, .app-links a img {
+    width: 30px;
+    margin: 0 10px;
+}
+
+/* Estilos adicionales para el menú hamburguesa */
+.hamburger-menu {
+    display: none;
+    background-color: #FF4020;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+}
+
+.hamburger-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.hamburger-menu ul li {
+    padding: 10px 0;
+}
+
+.hamburger-menu ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+
+/* Sección de Reviews */
+/* Sección de Reviews */
+.reviews-section {
+    margin: 20px;
+}
+
+.reviews-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas por fila */
+    padding: 20px;
+}
+
+.review-card,
+.game {
+    background-color: #333;
+    border-radius: 10px;
+    padding: 15px; /* Cards más pequeñas */
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.review-card:hover,
+.game:hover {
+    transform: scale(1.05);
+}
+
+.review-card img,
+.game img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.review-card h3,
+.game-title {
+    margin-top: 10px;
+    font-size: 1.3rem; /* Texto más pequeño */
+    color: #ffcc00;
+}
+
+.review-card p,
+.game-desc {
+    font-size: 1rem; /* Texto más pequeño */
+    color: #d9d9d9;
+    margin: 5px 0;
+}
+
+/* Punto de ruptura para pantallas más pequeñas */
+@media (max-width: 900px) {
+    .reviews-grid, .games {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 600px) {
+    .reviews-grid, .games {
+        grid-template-columns: 1fr; /* 1 columna en pantallas muy pequeñas */
+    }
+}

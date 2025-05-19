@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Perfil</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Puedes incluir un header similar al index, o dejarlo simple -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="carrito.html">Carrito</a></li>
+      </ul>
+      <div class="nav-icons">
+        <img src="img/lupa.png" alt="Buscar" class="icon search-icon">
+        <a href="#"><img src="img/user.png" alt="Usuario" class="icon user-icon"></a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Mi Perfil</h2>
+    <div id="profile-container">
+      <p><strong>Nombre:</strong> <span id="profile-name"></span></p>
+      <p><strong>Correo:</strong> <span id="profile-email"></span></p>
+    </div>
+    <button id="logout-btn">Cerrar sesión</button>
+  </main>
+
+  <footer>
+    <p>Síguenos en redes sociales</p>
+    <!-- Aquí tus enlaces y logos -->
+  </footer>
+   <script src="user.js"></script>
+  <script src="perfil.js"></script> 
+</body>
+</html>

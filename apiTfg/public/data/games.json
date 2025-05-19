@@ -1,0 +1,47 @@
+{
+    "games": [
+      {
+        "title": "Cyberpunk 2077",
+        "description": "Juego futurista, de acción.",
+        "ign": "IGN: 7/10",
+        "price": "60€",
+        "image": "../img/CYBERPUNK.jpg"
+      },
+      {
+        "title": "Magic: The Gathering",
+        "description": "Juego de cartas coleccionables.",
+        "ign": "IGN: 9/10",
+        "price": "30,99€",
+        "image": "../img/MAGIC.jpg"
+      },
+      {
+        "title": "Forza Horizon 5",
+        "description": "Juego de carreras en mundo abierto.",
+        "ign": "IGN: 9/10",
+        "price": "49,99€",
+        "image": "../img/FORZA.jpg"
+      },
+      {
+        "title": "Elden Ring",
+        "description": "Juego de rol y acción.",
+        "ign": "IGN: 10/10",
+        "price": "59,99€",
+        "image": "../img/ELDENRING.jpg"
+      },
+      {
+        "title": "Lies of P",
+        "description": "Juego de acción tipo soulslike.",
+        "ign": "IGN: 8/10",
+        "price": "39,99€",
+        "image": "../img/LIESOFP.jpg"
+      },
+      {
+        "title": "Call of Duty: Modern Warfare",
+        "description": "Juego de disparos en primera persona.",
+        "ign": "IGN: 8/10",
+        "price": "69,99€",
+        "image": "../img/COD.jpg"
+      }
+    ]
+  }
+  
