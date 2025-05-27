@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Resources\GameResource;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Resources\Json\JsonResource;
+use App\Http\Requests\GameRequest;
 
 class GameController extends Controller
 {
@@ -15,18 +16,18 @@ class GameController extends Controller
         return GameResource::collection(Game::all());
     }
 
-    public function store(Request $request): JsonResource
+    public function store(GameRequest $request): JsonResource // Inyectar GameRequest aquí
     {
-        $game = Game::create($request->validated());
+        $game = Game::create($request->validated()); // Ahora $request->validated() funcionará
         return new GameResource($game);
-    }
+    }   
 
     public function show(Game $game): JsonResource
     {
         return new GameResource($game);
     }
 
-    public function update(Request $request, Game $game): JsonResource
+    public function update(GameRequest $request, Game $game): JsonResource // Inyectar GameRequest aquí
     {
         $game->update($request->validated());
         return new GameResource($game);
