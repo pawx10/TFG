@@ -9,6 +9,8 @@ class GameResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
+     *
+     * @return array<string, mixed>
      */
     public function toArray(Request $request): array
     {
@@ -18,8 +20,9 @@ class GameResource extends JsonResource
             'description' => $this->description,
             'price' => $this->price,
             'image_url' => $this->image_url,
-            'created_at' => $this->created_at->toDateTimeString(),
-            'updated_at' => $this->updated_at->toDateTimeString(),
+   
+            'created_at' => $this->created_at ? $this->created_at->toDateTimeString() : null,
+            'updated_at' => $this->updated_at ? $this->updated_at->toDateTimeString() : null,
         ];
     }
 }
