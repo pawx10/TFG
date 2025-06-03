@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Juego</title>
+    <link rel="stylesheet" href="styles.css"> <!-- CSS general -->
+    <link rel="stylesheet" href="game-detail.css"> <!-- CSS específico para esta página -->
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="reviews.html">Todas las Reviews</a></li>
+            </ul>
+            <div class="nav-icons">
+                <img src="../img/lupa.png" alt="Buscar" class="icon search-icon">
+                <a href="carrito.html">
+                    <img src="../img/CARRITO.png" alt="Carrito" class="icon">
+                    <span id="cart-item-count" class="cart-item-count">0</span> <!-- Para la notificación del carrito -->
+                </a>
+                <span id="user-status-container"></span>
+                <a href="login.html" class="user-icon">
+                    <img src="../img/user.png" alt="Usuario" class="icon">
+                </a>
+                <button id="logout-btn" class="logout-button" style="display: none;">Cerrar Sesión</button>
+            </div>
+        </nav>
+    </header>
+
+    <main id="game-detail-container">
+        <!-- El contenido del juego se cargará aquí por JavaScript -->
+        <p class="loading-message">Cargando detalles del juego...</p>
+    </main>
+
+    <section id="game-reviews-section">
+        <h2>Reviews de este Juego</h2>
+        <div id="reviews-list">
+            <!-- Las reviews se cargarán aquí -->
+            <p class="loading-message">Cargando reviews...</p>
+        </div>
+    </section>
+
+    <!-- Funcionalidad 3: Formulario para añadir review (se mostrará si el usuario está logueado) -->
+    <section id="add-review-section" style="display: none;">
+        <h2>Escribe tu Review</h2>
+        <form id="add-review-form">
+            <input type="hidden" id="review-game-id" name="game_id">
+            <div>
+                <label for="review-rating">Calificación (1-5):</label>
+                <select id="review-rating" name="rating" required>
+                    <option value="5">★★★★★ (Excelente)</option>
+                    <option value="4">★★★★☆ (Muy Bueno)</option>
+                    <option value="3">★★★☆☆ (Bueno)</option>
+                    <option value="2">★★☆☆☆ (Regular)</option>
+                    <option value="1">★☆☆☆☆ (Malo)</option>
+                </select>
+            </div>
+            <div>
+                <label for="review-content">Tu opinión:</label>
+                <textarea id="review-content" name="content" rows="4" required></textarea>
+            </div>
+            <button type="submit">Enviar Review</button>
+            <p id="review-form-message" class="form-message"></p>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2024 Tienda de Videojuegos. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="user.js"></script>
+    <script src="cart.js"></script> <!-- Para actualizar el contador del carrito -->
+    <script src="script.js"></script> <!-- Para lógica común del header y apiRequest -->
+    <script src="game-detail.js"></script>
+</body>
+</html>

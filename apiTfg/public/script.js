@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", async () => {
+
     const searchIcon = document.querySelector(".search-icon");
     const menu = document.getElementById("hamburger-menu");
     // const userIcon = document.querySelector(".user-icon"); // Se manejará dentro de actualizarEstadoHeader
@@ -10,6 +11,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const userStatusContainer = document.getElementById("user-status-container");
     const userIconLink = document.querySelector("a.user-icon"); // El enlace <a> que envuelve la imagen de usuario
     const logoutBtnHeader = document.getElementById("logout-btn"); // Botón de logout en el header de index.html
+    
 
     if (searchIcon && menu) {
         searchIcon.addEventListener("click", () => {
