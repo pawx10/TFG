@@ -1,10 +1,1 @@
-main 
-header
 
-grid layout,responsive
-puntos de rotura 
-grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-
-cards en bases de datos, dinámicas, promesa desde js, petición asíncrona, backend con endopoint que me devuelva json
-crear carpeta data con json para las cards
-el json me lo devuelve luego el endpoint del backend
