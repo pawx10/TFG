@@ -1,0 +1,79 @@
+Bitácora de Tareas del Proyecto TFGGAME.
+Realizado por: Pablo Arroyo Maqueda
+FASE 1: Planificación y Desarrollo Backend Inicial
+Semana del 24 de Febrero - 28 de Febrero (2025)
+24/02/2025 (Lunes): Arranque oficial del TFG. Definición de requisitos funcionales y alcance del proyecto.
+25/02/2025 (Martes): Diseño del esquema Entidad-Relación (E/R) de la base de datos (Usuarios, Juegos, Reviews, Carrito).
+27/02/2025 (Jueves): Configuración del entorno Laravel local. Creación del proyecto base.
+28/02/2025 (Viernes): Implementación de migraciones iniciales: users y personal_access_tokens. Desarrollo del Modelo User.
+Semana del 3 de Marzo - 7 de Marzo (2025)
+03/03/2025 (Lunes): Desarrollo del AuthController para registro y login con Sanctum.
+04/03/2025 (Martes): Pruebas de la autenticación con Postman. Creación del UserResource.
+06/03/2025 (Jueves): Migraciones para games y reviews. Desarrollo de los Modelos Game y Review.
+07/03/2025 (Viernes): Establecimiento de las relaciones Eloquent entre los modelos principales.
+Semana del 10 de Marzo - 14 de Marzo (2025)
+10/03/2025 (Lunes): Implementación de los métodos index y show en GameController. Creación del GameResource.
+12/03/2025 (Miércoles): Desarrollo del ReviewController (métodos index, show y store protegido). Creación del ReviewResource.
+14/03/2025 (Viernes): Creación de los Form Requests (UserRequest, GameRequest, ReviewRequest) para la validación de entradas.
+Semana del 17 de Marzo - 21 de Marzo (2025)
+17/03/2025 (Lunes): Definición y configuración de las rutas API públicas y protegidas en routes/api.php.
+19/03/2025 (Miércoles): Creación de Seeders (UsersSeeder, GamesSeeder, ReviewsSeeder) para generar datos de prueba.
+20/03/2025 (Jueves): Refactorización de código en controladores y pruebas de los endpoints de API.
+21/03/2025 (Viernes): Diseño de la funcionalidad del carrito: migraciones para carts y cart_items. Desarrollo de los modelos correspondientes.
+Semana del 24 de Marzo - 28 de Marzo (2025)
+25/03/2025 (Martes): Implementación de los endpoints CRUD restantes para Games (store, update, destroy) en GameController.
+27/03/2025 (Jueves): Desarrollo de los endpoints CRUD para Reviews (update, destroy) en ReviewController.
+28/03/2025 (Viernes): Investigación e implementación de una funcionalidad básica de filtrado para el listado de juegos (GET /api/games).
+Semana del 31 de Marzo - 4 de Abril (2025)
+31/03/2025 (Lunes): Desarrollo de la lógica para obtener reviews específicas de un juego (gameReviews en ReviewController).
+01/04/2025 (Martes): Sesión intensiva de pruebas de todos los endpoints del backend con Postman, corrigiendo pequeños bugs.
+03/04/2025 (Jueves): Revisión y adición de comentarios y DocBlocks básicos al código del backend para claridad.
+04/04/2025 (Viernes): Congelación de la funcionalidad principal del backend. Preparación para la integración con el frontend.
+FASE 2: Desarrollo Frontend e Integración
+Semana del 7 de Abril - 11 de Abril (2025)
+07/04/2025 (Lunes): Inicio del frontend: Diseño y maquetación HTML/CSS de la página principal (index.html) y la estructura general.
+08/04/2025 (Martes): Maquetación de las páginas de autenticación (login.html, register.html) y el esqueleto de la página de perfil (perfil.html).
+10/04/2025 (Jueves): Creación del archivo script.js. Implementación de la función apiRequest para la comunicación con la API y lógica de navegación básica.
+11/04/2025 (Viernes): Conexión de los formularios de login y registro con la API a través de script.js.
+Semana del 14 de Abril - 18 de Abril (2025)
+14/04/2025 (Lunes): Desarrollo de user.js para la gestión de datos de usuario y perfil.js para la funcionalidad de la página de perfil, incluyendo el logout.
+16/04/2025 (Miércoles): Implementación de la función actualizarEstadoHeader en script.js para reflejar dinámicamente si el usuario está logueado.
+18/04/2025 (Viernes): Desarrollo de la función cargarJuegos en script.js para mostrar los juegos desde la API en index.html.
+Semana del 21 de Abril - 25 de Abril (2025)
+21/04/2025 (Lunes): Maquetación de la página del carrito (carrito.html) y la página general de reviews (reviews.html).
+22/04/2025 (Martes): Implementación de cart.js: lógica para añadir y eliminar ítems del carrito usando localStorage.
+24/04/2025 (Jueves): Desarrollo de la función mostrarCarrito en cart.js para renderizar los ítems en carrito.html.
+25/04/2025 (Viernes): Implementación de la carga dinámica de todas las reviews en reviews.html.
+Semana del 28 de Abril - 2 de Mayo (2025)
+29/04/2025 (Martes): Refinamiento general del CSS (styles.css) y aplicación de estilos específicos a las nuevas páginas.
+30/04/2025 (Miércoles): Maquetación de la página de detalle del juego (game-detail.html).
+01/05/2025 (Jueves): Implementación de game-detail.js: carga de los detalles del juego y sus reviews específicas desde la API.
+02/05/2025 (Viernes): Desarrollo del formulario para añadir nuevas reviews en game-detail.js.
+Semana del 5 de Mayo - 9 de Mayo (2025)
+05/05/2025 (Lunes): Sesión de pruebas de integración frontend-backend. Identificación de puntos de mejora.
+07/05/2025 (Miércoles): Corrección de bugs y ajustes en la comunicación API.
+08/05/2025 (Jueves): Implementación de mejoras de usabilidad en el frontend.
+09/05/2025 (Viernes): Optimización del código JavaScript y revisión final de la consistencia del header y la navegación.
+FASE 3: Despliegue y Documentación Final
+Semana del 12 de Mayo - 16 de Mayo (2025)
+12/05/2025 (Lunes): Planificación final del despliegue. Creación de instancia RDS (MySQL) en AWS.
+13/05/2025 (Martes): Lanzamiento de instancia EC2 (Ubuntu), asignación de IP Elástica. Configuración de grupos de seguridad.
+15/05/2025 (Jueves): Instalación de Apache, PHP 8.2, extensiones y Composer en la EC2.
+16/05/2025 (Viernes): Subida del proyecto a la EC2. Instalación de dependencias. Configuración de .env y permisos.
+Semana del 19 de Mayo - 23 de Mayo (2025)
+19/05/2025 (Lunes): Ejecución de migraciones y seeders en RDS. Optimización de Laravel.
+21/05/2025 (Miércoles): Configuración de Apache para servir la aplicación sobre HTTP. Pruebas.
+23/05/2025 (Viernes): Configuración de DuckDNS. Instalación de Certbot y obtención de certificado SSL.
+Semana del 26 de Mayo - 30 de Mayo (2025)
+26/05/2025 (Lunes): Configuración de Apache para HTTPS y redirección. Actualización de APP_URL.
+27/05/2025 (Martes): Pruebas exhaustivas de la aplicación desplegada. Corrección de rutas de imágenes/estáticos.
+29/05/2025 (Jueves): Generación de documentación de la API con Scribe.
+30/05/2025 (Viernes): Inicio de la redacción de la memoria del TFG (Introducción, Objetivos, Diseño).
+Semana del 2 de Junio - 6 de Junio (2025)
+02/06/2025 (Lunes): Documentación de la implementación (Backend y Frontend) para la memoria.
+04/06/2025 (Miércoles): Redacción de la sección de Despliegue y Pruebas para la memoria.
+06/06/2025 (Viernes): Elaboración de las Conclusiones y revisión general de la memoria.
+Semana del 9 de Junio - 11 de Junio (2025)
+09/06/2025 (Lunes): Creación de las diapositivas para la presentación oral.
+10/06/2025 (Martes): Ensayo de la presentación oral. Optimización de costos en AWS (detener servicios si es necesario).
+11/06/2025 (Miércoles): Verificación final de todos los entregables y aplicación online. Preparación para exposición.
