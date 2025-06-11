@@ -11,6 +11,7 @@ Desplegar la aplicación en la nube: Implementar la aplicación en AWS EC2 con R
 Generar documentación técnica: Producir documentación de la API y una memoria del proyecto.
 
 Tecnologías Utilizadas
+
    
 Para la realización de este proyecto, se han empleado las siguientes tecnologías y herramientas principales:
 Backend:
