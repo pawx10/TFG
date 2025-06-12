@@ -291,7 +291,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                                 price: parseFloat(gamePrice),
                                 image_url: gameImage
                             });
-                            // Opcional: actualizar contador de carrito si tienes uno visible en el header
+                          
                             // if (typeof window.actualizarContadorCarrito === 'function') window.actualizarContadorCarrito();
                         } else {
                             console.error("La función agregarAlCarrito no está definida. Asegúrate de que cart.js se carga correctamente.");
@@ -310,7 +310,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
     }
 
-    // Llamada para cargar los juegos (solo si estamos en una página que los muestra)
+   
     if (document.querySelector(".games")) {
         cargarJuegos();
     }
