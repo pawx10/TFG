@@ -7,7 +7,7 @@
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",
-               //     "Accept": "application/json", // 👈 Importante para evitar redirección
+               
                     "Authorization": `Bearer ${token}`
                 }
             });
