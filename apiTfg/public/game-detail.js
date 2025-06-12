@@ -7,10 +7,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     const reviewGameIdInput = document.getElementById("review-game-id"); // Input oculto para el game_id
     const reviewFormMessage = document.getElementById("review-form-message"); // Para mensajes de éxito/error del form
 
-    // API_BASE debería ser global si se usa en múltiples scripts, o definido aquí si es solo para este.
-    // Asumimos que API_BASE está disponible globalmente desde script.js o se define aquí.
-    // const API_BASE = window.API_BASE || `${window.location.origin}/api`; // Ejemplo si es global
-    // Si no es global, y script.js no la define globalmente, usa:
     const API_BASE_DETAIL = `${window.location.origin}/api`;
 
 
@@ -81,7 +77,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
     }
 
-    // --- Cargar Reviews del Juego ---
+
     async function loadGameReviews() {
         if (!reviewsListContainer) return;
         reviewsListContainer.innerHTML = "<p class='loading-message'>Cargando reviews...</p>";
@@ -118,7 +114,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
     }
 
-    // --- Funcionalidad 3: Enviar Nueva Review ---
+  
     if (addReviewForm) {
         addReviewForm.addEventListener("submit", async (event) => {
             event.preventDefault();
@@ -138,7 +134,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 return;
             }
 
-            // Obtener el valor del game_id DESDE el input oculto en el momento del submit
+  
             const gameIdForReview = reviewGameIdInput ? reviewGameIdInput.value : null;
 
             console.log("Valor del input 'review-game-id' al enviar:", gameIdForReview); // DEBUG
@@ -169,8 +165,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                         reviewFormMessage.style.display = "block";
                     }
                     addReviewForm.reset();
-                    // Asignar de nuevo el game_id al input oculto después del reset,
-                    // ya que form.reset() podría borrarlo si no es un valor por defecto del HTML.
+            
                     if (reviewGameIdInput) reviewGameIdInput.value = gameIdForReview;
 
                     await loadGameReviews(); // Recargar la lista de reviews
@@ -200,9 +195,9 @@ document.addEventListener("DOMContentLoaded", async () => {
         });
     }
 
-    // --- Controlar visibilidad del formulario de review y contador de carrito ---
+ 
     async function checkUserStatusAndSetupPage() {
-        // API_BASE_DETAIL o la variable global API_BASE de script.js
+     
         const userData = await obtenerUserData(API_BASE_DETAIL);
         if (addReviewSection) {
             if (userData) {
@@ -215,9 +210,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
 
-    // --- Funcionalidad 4: Actualizar Contador del Carrito en Header ---
-    // Esta función debe ser global si se llama desde otros scripts (ej. cart.js)
-    // o definida aquí si solo se usa en esta página.
     function actualizarContadorCarrito() {
         const cartItemCountElement = document.getElementById("cart-item-count");
         if (cartItemCountElement && typeof obtenerCarrito === 'function') {
@@ -227,17 +219,17 @@ document.addEventListener("DOMContentLoaded", async () => {
             cartItemCountElement.style.display = itemCount > 0 ? "inline-block" : "none";
         }
     }
-    // Exponerla si es necesario globalmente
+
     window.actualizarContadorCarrito = actualizarContadorCarrito;
 
 
-    // --- Inicialización ---
-    // Asegurarse que las funciones globales de script.js y user.js estén disponibles
+
+
     if (typeof window.apiRequest !== 'function' || typeof window.obtenerUserData !== 'function' || typeof window.actualizarEstadoHeader !== 'function') {
         console.error("Funciones globales esenciales (apiRequest, obtenerUserData, actualizarEstadoHeader) no están disponibles. Asegúrate que script.js y user.js se cargan antes y exponen estas funciones.");
-        // Podrías mostrar un error al usuario aquí o detener la ejecución.
+    
         if(gameDetailContainer) gameDetailContainer.innerHTML = "<p class='error-message'>Error crítico al cargar la página. Funcionalidades básicas no disponibles.</p>";
-        return; // Detener si las dependencias no están
+        return; 
     }
 
 
